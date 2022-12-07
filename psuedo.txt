@@ -1,0 +1,23 @@
+we want to calculate 2 values with 1 operand
+
+1 number -> operand -> 1 number
+
+1 number:  
+    populate visually
+    state load number
+
+operand
+    populate visually
+    state load operand
+
+1 number:  
+    populate visually
+    state load number
+
+addEvents:
+-buttonEvents
+-operatorsEvents
+-NumberEvents
+
+
+Logic 

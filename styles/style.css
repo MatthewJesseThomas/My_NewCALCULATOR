@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgba(0,212,255,1);
+}
+
+ .containing-grid, .btn-button {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+button {
+    height: 3rem;
+}
+.containing-grid, .btn-button> button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 3px solid  rgba(0, 0, 0, .75);
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    border-radius: 5px;
+}
+
+.containing-grid, .btn-button> button:hover {
+    background-color: rgba(255, 255, 255, .9) ;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.outputDisplay {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+    height: 7rem;
+}
+
+.outputDisplay .previousOperand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.8rem;
+}
+.outputDisplay .currentOperand {
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 400px) {
+
+    .containing-grid, .btn-button {
+        margin: auto;
+        width: 99%;
+    }
+
+    .flex-.containing-grid, .btn-button {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .containing-grid, .btn-button {
+        margin: auto;
+        width: 60%;
+    }
+
+    .flex-calculator-grid, .btn-button {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .calculator-grid, .btn-button {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    .flex-calculator-grid, .btn-button {
+        flex-direction: column;
+    }
+}
